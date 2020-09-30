@@ -64,4 +64,4 @@ Feature: Como usuario de Fichap, quiero ingresar a la aplicacion para interactua
 
     Examples:
       |        email         |  pass  |nombre |apellido|  dni   | telefono |     direccion     |  diaSolicitud  |mesSolicitud|añoSolicitud|   motivoSolicitud   |
-      |gonza_2208@hotmail.com| 123456 |Gonzalo|Soriano |39767434|2604586689|Calle Corrientes 92|      17        | Noviembre  |    2020    |      Tramite123456456        |
+      |gonza_2208@hotmail.com| 123456 |Gonzalo|Soriano |39767434|2604586689|Calle Corrientes 92|      19        |   Octubre  |    2020    |  Realizar tramite   |

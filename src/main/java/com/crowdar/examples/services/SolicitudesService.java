@@ -37,13 +37,7 @@ public class SolicitudesService {
     public static void setDate(String diaSolicitado, String mesSolicitado, String anioSolicitado) {
 
         String mes = mesSolicitado + " " + anioSolicitado;
-/*
-        if (!DriverManager.getDriverInstance().findElementByXPath("//android.widget.ScrollView//android.view.ViewGroup[1]/android.widget.TextView[@index=1]").getText().equals(mes)) {
-            while(!DriverManager.getDriverInstance().findElementByXPath("//android.widget.ScrollView//android.view.ViewGroup[1]/android.widget.TextView[@index=1]").getText().equals(mes)) {
-                DriverManager.getDriverInstance().findElementByXPath("//android.widget.ScrollView//android.view.ViewGroup[@index=2]/android.widget.ImageView[@index=0]").click();
-            }
-        }
-*/
+
         if (!MobileActionManager.getElement(SolicitudesConstants.CALENDAR_MONTHS_LOCATOR).getText().equals(mes)) {
             while(!MobileActionManager.getElement(SolicitudesConstants.CALENDAR_MONTHS_LOCATOR).getText().equals(mes)) {
                 MobileActionManager.getElement(SolicitudesConstants.BUTTON_NEXTMONTH_CALENDAR_LOCATOR).click();
@@ -51,7 +45,6 @@ public class SolicitudesService {
         }
 
         List<WebElement> dias = MobileActionManager.getElements(SolicitudesConstants.CALENDAR_DAYS_LOCATOR);
-        //List<WebElement> dias = DriverManager.getDriverInstance().findElementsByXPath("//android.widget.TextView[@index=0]");
         for (WebElement dia:dias){
             if(Integer.parseInt(dia.getText()) == Integer.parseInt(diaSolicitado)){
                 dia.click();
