@@ -22,7 +22,7 @@ Feature: Como user quiero usar fichap para entrar, abrir un horario, y agregar u
     | kd.maurii@gmail.com | D3b8Be  |
 
 
-  @Smoke @FichapApk @CheckInCheckOut
+ @Smoke @FichapApk @CheckInCheckOut
   Scenario Outline: The client starts the applicacion ApiDemos accesing to Bouncing Balls
     Given La app es cargada correctamente
     When El user carga su '<email>' y su '<pw>'
