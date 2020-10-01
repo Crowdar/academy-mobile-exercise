@@ -1,11 +1,14 @@
 package com.crowdar.examples.constants;
 
 public class HomeConstants {
+    public static final String MENU_BTN = "HomeView.menuBtn";
+    public static final String NOTIFICACIONES_BTN = "HomeView.notifyBtn";
+    public static final String COMENZAR_JORNADA_BTN = "HomeView.comenzarJornadaBtn";
+    public static final String FINALIZAR_JORNADA_BTN = "HomeView.finalizarJornadaBtn";
+    public static final String COMENZAR_JORNADA_POPUP_REPORTE_BTN = "HomeView.comenzarJornadaReportePopUpBtn";
+    public static final String FINALIZAR_JORNADA_ACEPTAR_POP_UP_BTN = "HomeView.aceptarFinalizarJornadaBtn";
+    public static final String TERMINAR_BTN = "HomeView.terminarBtn";
 
-    public static final String SIGN_OUT_BUTTON_LOCATOR = "homeView.signOutButton";
-    public static final String CHANGE_LANGUAGE_BUTTON_LOCATOR = "homeView.changeLanguageButton";
-    public static final String CAMERA_BUTTON_LOCATOR = "homeView.cameraButton";
-    public static final String PHONE_INPUT_LOCATOR = "homeView.phoneInput";
 
-    public static final String VIEW_NOT_DISPLAYED_MESSAGE = "Home page is not displayed.";
+    public static final String TITULO_TXT = "HomeView.tituloTxt";
 }

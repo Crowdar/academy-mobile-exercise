@@ -14,20 +14,5 @@ import cucumber.api.java.en.When;
  */
 public class LoginSteps extends PageSteps {
 
-    @Given("The app is loaded correctly")
-    @Then("Login page is displayed")
-    public void isLoginPageVisible() {
-        LoginService.isViewLoaded();
-    }
-
-    @When("The user goes to the Sign Up page")
-    public void goToSignUp() {
-        MobileActionManager.click(LoginConstants.SIGN_UP_BUTTON_LOCATOR);
-    }
-
-    @When("The user logs in the application with: (.*), (.*)")
-    public void doLoginProcess(String email, String password) {
-        LoginService.doLogin(email, password);
-    }
 
 }
