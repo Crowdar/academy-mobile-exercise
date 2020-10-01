@@ -13,6 +13,7 @@ import io.cucumber.java.en.When;
 public class FichapSteps extends PageSteps {
 
     @Given("The app is loaded correctly.")
+    @And("Login page is displayed.")
     public void theAppIsLoadedCorrectly() {
         LoginService.isViewLoaded();
     }

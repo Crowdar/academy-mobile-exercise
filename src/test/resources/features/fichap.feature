@@ -12,7 +12,8 @@ Feature: As a potential client i want to interact with the mobile application
     Then Home page is displayed.
 
     #When The user change your name: <new_name>
-    And The user log out of the app.
+    Then The user log out of the app.
+    And Login page is displayed.
 
 @Fichap
     Examples:
