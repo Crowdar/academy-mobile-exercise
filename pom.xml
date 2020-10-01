@@ -33,7 +33,7 @@
             <properties>
                 <crowdar.driverHub>http://127.0.0.1:4723/wd/hub</crowdar.driverHub>
                 <cucumber.runner>testng.xml</cucumber.runner>
-                <crowdar.avd></crowdar.avd>
+                <crowdar.avd>Pixel</crowdar.avd>
                 <crowdar.appLocation>D:/MisDocumentos/Documentos/Lippia/mobile-local/lippia-mobile-sample-project/sample_apk/Fichap_4.apk</crowdar.appLocation>
                 <crowdar.deviceName>Redmi</crowdar.deviceName>
             </properties>

@@ -8,12 +8,13 @@ Feature: As a potential client i want to interact with the mobile application
     When The user starts the day
     Then Timekeeper is displayed
 
-    When The user changes the password: <new_password>
-    Then The user accept the notification successful password change
+    When The user ends the day
+    Then Home page is displayed.
 
-    When The user log out of the app
-    Then Login page is displayed
+    #When The user change your name: <new_name>
+    And The user log out of the app.
+
 @Fichap
     Examples:
-      | email                    | password |new_password|
-      | luisjivillalba@gmail.com | asd123   | 123asd     |:D
+      | email                    | password |
+      | luisjivillalba@gmail.com | asd123   |

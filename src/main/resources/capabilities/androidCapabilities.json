@@ -3,8 +3,8 @@
   "app": "{{app}}",
   "platformName": "Android",
   "avd": "{{avd}}",
+  "autoAcceptAlerts": "true",
   "resetKeyboard": "true",
   "unicodeKeyboard": "true",
-  "autoGrantPermissions": "true",
-  "autoAcceptAlerts": "true"
+  "autoGrantPermissions": "true"
 }

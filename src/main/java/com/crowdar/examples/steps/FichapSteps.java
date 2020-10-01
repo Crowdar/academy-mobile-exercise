@@ -4,6 +4,8 @@ import com.crowdar.core.PageSteps;
 
 import com.crowdar.examples.services.LoginService;
 import com.crowdar.examples.services.HomeService;
+import com.crowdar.examples.services.MenuService;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,8 +16,6 @@ public class FichapSteps extends PageSteps {
     public void theAppIsLoadedCorrectly() {
         LoginService.isViewLoaded();
     }
-
-
 
     @Then("The user logs in the application  with: (.*), (.*)")
     public void theUserLogsInTheApplicationWithEmailPassword(String email,String pass) {
@@ -37,20 +37,21 @@ public class FichapSteps extends PageSteps {
         HomeService.isTimekeeperLoaded();
     }
 
-    @When("The user changes the password: (.*)")
-    public void theUserChangesThePasswordNew_password() {
+    @When("The user change your name: (.*)")
+    public void theUserChangesThePasswordNew_password(String NewPass) {
+        MenuService.changeName(NewPass);
     }
 
-    @Then("The user accept the notification successful password change")
-    public void theUserAcceptTheNotificationSuccessfulPasswordChange() {
+
+    @When("The user ends the day")
+    public void theUserEndsTheDay() {
+        HomeService.endDay();
     }
 
-    @When("The user log out of the app")
+
+    @And("The user log out of the app.")
     public void theUserLogOutOfTheApp() {
-    }
-
-    @Then("Login page is displayed")
-    public void loginPageIsDisplayed() {
+        MenuService.logOut();
     }
 }
 
