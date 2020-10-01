@@ -14,10 +14,10 @@ public class HomeService {
 
     public static void empezarJornada() {
 
-        MobileActionManager.click(HomeConstants.COMENZAR_JORNADA_BTN);
-      //  DriverManager.getDriverInstance().findElement(By.xpath
-      //                  ("//android.view.ViewGroup/android.ViewGroup[@text, 'Comenzar jornada']")).
-       //         click();
+        //MobileActionManager.click(HomeConstants.COMENZAR_JORNADA_BTN);
+        DriverManager.getDriverInstance().findElement(By.xpath
+                        ("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup")).
+                click();
     }
 
     public static void finalizarJornada() {

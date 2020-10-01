@@ -12,4 +12,8 @@ public class PasswordService {
         MobileActionManager.click(PasswordConstants.GUARDAR_BTN);
         MobileActionManager.click(PasswordConstants.ACEPTAR_AVISO_BTN);
     }
+
+    public static void abrirMenu() {
+        MobileActionManager.click(PasswordConstants.MENU_BTN);
+    }
 }

@@ -4,6 +4,7 @@ import com.crowdar.examples.services.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
@@ -52,8 +53,14 @@ public class FichapAppSteps {
         PasswordService.cambiarPassword(pw);
     }
 
-    @And("Abre el menu de Password")
-    public void abreElMenuDePassword() {
 
+    @Then("El cliente verifica que está en la pantalla de inicio de sesión")
+    public void elClienteVerificaQueEstáEnLaPantallaDeInicioDeSesión() {
+        Assert.assertTrue(LoginService.verificarPantalla());
+    }
+
+    @And("Abre el menu desde Password")
+    public void abreElMenuDesdePassword() {
+        PasswordService.abrirMenu();
     }
 }

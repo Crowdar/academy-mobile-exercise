@@ -19,4 +19,8 @@ public class LoginService {
 
 
     }
+
+    public static boolean verificarPantalla() {
+        return ((MobileActionManager.isVisible(LoginConstants.EMAIL_INPUT)) && (MobileActionManager.isVisible(LoginConstants.PASSWORD_INPUT)));
+    }
 }
