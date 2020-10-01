@@ -32,7 +32,4 @@ public class HomeService {
     public static void isTimekeeperLoaded() {
         Assert.assertTrue(MobileActionManager.isVisible(FichapHomeConstans.TIMEKEEPER_LOCATOR),"Timekeeper is not displayed");
     }
-
-
-
 }

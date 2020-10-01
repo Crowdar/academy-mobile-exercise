@@ -1,29 +1,25 @@
 package com.crowdar.examples.steps;
 
-import com.crowdar.core.Injector;
 import com.crowdar.core.PageSteps;
-import com.crowdar.core.actions.MobileActionManager;
-import com.crowdar.examples.pages.ApiDemoHome;
 
-import com.crowdar.examples.services.FichapLoginService;
+import com.crowdar.examples.services.LoginService;
 import com.crowdar.examples.services.HomeService;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.Assert;
 
 public class FichapSteps extends PageSteps {
 
     @Given("The app is loaded correctly.")
     public void theAppIsLoadedCorrectly() {
-        FichapLoginService.isViewLoaded();
+        LoginService.isViewLoaded();
     }
 
 
 
     @Then("The user logs in the application  with: (.*), (.*)")
     public void theUserLogsInTheApplicationWithEmailPassword(String email,String pass) {
-        FichapLoginService.logIn(email,pass);
+        LoginService.logIn(email,pass);
     }
 
     @Then("Home page is displayed.")

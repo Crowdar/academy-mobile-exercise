@@ -13,7 +13,7 @@ Feature: As a potential client i want to interact with the mobile application
 
     When The user log out of the app
     Then Login page is displayed
-
+@Fichap
     Examples:
       | email                    | password |new_password|
-      | luisjivillalba@gmail.com | asd123   | 123asd     |
+      | luisjivillalba@gmail.com | asd123   | 123asd     |:D
