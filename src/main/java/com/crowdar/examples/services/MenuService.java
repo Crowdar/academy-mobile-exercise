@@ -6,7 +6,7 @@ import com.crowdar.examples.constants.MenuConstants;
 public class MenuService {
     public static void destino(String destino){
         switch (destino.toLowerCase()){
-            case "home": MobileActionManager.click(MenuConstants.HOME_BTN); break;
+            case "fichar": MobileActionManager.click(MenuConstants.HOME_BTN); break;
             case "historial": MobileActionManager.click(MenuConstants.HISTORIAL_BTN); break;
             case "solicitudes": MobileActionManager.click(MenuConstants.SOLICITUDES_BTN); break;
             case "perfil": MobileActionManager.click(MenuConstants.PERFIL_BTN); break;

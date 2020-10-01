@@ -36,6 +36,7 @@
                 <crowdar.appLocation>E:\Datos\academy-mobile-exercise\sample_apk\fichap_4_armeabi.apk</crowdar.appLocation>
                 <crowdar.deviceName>Samsung J7</crowdar.deviceName>
                 <crowdar.projectType>MOBILE_ANDROID</crowdar.projectType>
+                <crowdar.projectType.driverCapabilities.jsonFile>src/main/resources/capabilities/androidCapabilities.json</crowdar.projectType.driverCapabilities.jsonFile>
             </properties>
         </profile>
         <profile>

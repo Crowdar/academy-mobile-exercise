@@ -1,9 +1,6 @@
 package com.crowdar.examples.steps;
 
-import com.crowdar.examples.services.CamaraService;
-import com.crowdar.examples.services.HomeService;
-import com.crowdar.examples.services.MenuService;
-import com.crowdar.examples.services.PermisosService;
+import com.crowdar.examples.services.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
@@ -37,5 +34,15 @@ public class PopUpSteps {
     @And("Acepta Cerrar Sesión")
     public void aceptaCerrarSesión() {
         MenuService.destino("Aceptar cerrar sesion");
+    }
+
+    @And("Hace click en Fichar")
+    public void haceClickEnFichar() {
+        MenuService.destino("Fichar");
+    }
+
+    @And("Acepta Enviar la Solicitud")
+    public void aceptaEnviarLaSolicitud() {
+        SolicitudesServices.AceptarEnviarSolicitud();
     }
 }
