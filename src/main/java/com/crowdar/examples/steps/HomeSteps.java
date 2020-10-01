@@ -4,6 +4,7 @@ import com.crowdar.core.PageSteps;
 import com.crowdar.core.actions.MobileActionManager;
 import com.crowdar.examples.services.CameraService;
 import com.crowdar.examples.services.HomeService;
+import com.crowdar.examples.services.TravelService;
 import cucumber.api.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -22,9 +23,21 @@ public class HomeSteps extends PageSteps {
     public void elClienteIniciaSuJornada() {
         HomeService.startWorkingDay();
         CameraService.takePicture();
+        TravelService.startWorkingDay();
     }
 
-    @io.cucumber.java.en.Then("Accede a la pantalla de recorrido")
+    @Then("Accede a la pantalla de recorrido")
     public void accedeALaPantallaDeRecorrido() {
+        TravelService.isViewLoaded();
+    }
+
+    @When("El cliente cierra su jornada")
+    public void elClienteCierraSuJornada() {
+        TravelService.finnishWorkingDay();
+    }
+
+    @Then("Vuelve a la pantalla principal")
+    public void vuelveALaPantallaPrincipal() {
+        HomeService.isViewLoaded();
     }
 }

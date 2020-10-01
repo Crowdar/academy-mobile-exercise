@@ -10,6 +10,11 @@ Feature: Como cliente de la aplicacion quiero interactuar con la misma.
 
     When El cliente cierra su jornada
     Then Vuelve a la pantalla principal
+
+    When Cierra Sesion
+    Then Vuelve a la pantalla login
+
+
     Examples:
     | email                | password |
     | dminguez33@gmail.com | GkhncC   |
