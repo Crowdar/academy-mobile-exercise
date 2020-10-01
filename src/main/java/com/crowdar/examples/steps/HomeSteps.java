@@ -2,9 +2,10 @@ package com.crowdar.examples.steps;
 
 import com.crowdar.core.PageSteps;
 import com.crowdar.core.actions.MobileActionManager;
+import com.crowdar.examples.services.CameraService;
 import com.crowdar.examples.services.HomeService;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.When;
 
 /**
  * This class handles the steps in the features files and connects with the service in case of having business logic.
@@ -17,14 +18,13 @@ public class HomeSteps extends PageSteps {
         HomeService.isViewLoaded();
     }
 
-    @When("The user changes the language")
-    public void doChangeLanguage() {
-        MobileActionManager.click(HomeConstants.CHANGE_LANGUAGE_BUTTON_LOCATOR);
+    @When("El cliente inicia su jornada")
+    public void elClienteIniciaSuJornada() {
+        HomeService.startWorkingDay();
+        CameraService.takePicture();
     }
 
-    @When("The user log out of the app")
-    public void doSignOut() {
-        MobileActionManager.click(HomeConstants.SIGN_OUT_BUTTON_LOCATOR);
+    @io.cucumber.java.en.Then("Accede a la pantalla de recorrido")
+    public void accedeALaPantallaDeRecorrido() {
     }
-
 }

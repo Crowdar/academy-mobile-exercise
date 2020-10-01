@@ -1,9 +1,9 @@
 package com.crowdar.examples.constants;
 
 public class TravelConstants {
-    public static String START_WORKING_DAY_BUTTON_LOCATOR = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]";
-    public static String FINISH_WORKING_DAY_BUTTON_LOCATOR = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView";
-    public static String CONFIRM_FINISH_BUTTON_LOCATOR ="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]";
-    public static String FINISH_BUTTON_LOCATOR = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup";
-    public static String MENU_BUTTON_LOCATOR = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]";
+    public static final String START_WORKING_DAY_BUTTON_LOCATOR = "TravelView.startWorkingDayButton";
+    public static final String FINISH_WORKING_DAY_BUTTON_LOCATOR = "TravelView.finishWorkingDayButton";
+    public static final String CONFIRM_FINISH_BUTTON_LOCATOR = "TravelView.confirmFinishButton";
+    public static final String FINISH_BUTTON_LOCATOR = "TravelView.finisButton";
+    public static final String MENU_BUTTON_LOCATOR = "TravelView.menuTravelButton";
 }
