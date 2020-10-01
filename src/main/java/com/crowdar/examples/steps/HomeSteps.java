@@ -23,7 +23,7 @@ public class HomeSteps extends PageSteps {
         MobileActionManager.click(HomeConstants.CHANGE_LANGUAGE_BUTTON_LOCATOR);
     }
 
-    @When("The user log out of the app")
+    @When("The usesdfr log out of the app")
     public void doSignOut() {
         MobileActionManager.click(HomeConstants.SIGN_OUT_BUTTON_LOCATOR);
     }
