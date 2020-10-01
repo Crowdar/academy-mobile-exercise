@@ -2,10 +2,11 @@ package com.crowdar.examples.steps;
 
 import com.crowdar.core.PageSteps;
 import com.crowdar.core.actions.MobileActionManager;
-import com.crowdar.examples.constants.HomeConstants;
+import com.crowdar.examples.services.CameraService;
 import com.crowdar.examples.services.HomeService;
+import com.crowdar.examples.services.TravelService;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.When;
 
 /**
  * This class handles the steps in the features files and connects with the service in case of having business logic.
@@ -18,14 +19,25 @@ public class HomeSteps extends PageSteps {
         HomeService.isViewLoaded();
     }
 
-    @When("The user changes the language")
-    public void doChangeLanguage() {
-        MobileActionManager.click(HomeConstants.CHANGE_LANGUAGE_BUTTON_LOCATOR);
+    @When("El cliente inicia su jornada")
+    public void elClienteIniciaSuJornada() {
+        HomeService.startWorkingDay();
+        CameraService.takePicture();
+        TravelService.startWorkingDay();
     }
 
-    @When("The user log out of the app")
-    public void doSignOut() {
-        MobileActionManager.click(HomeConstants.SIGN_OUT_BUTTON_LOCATOR);
+    @Then("Accede a la pantalla de recorrido")
+    public void accedeALaPantallaDeRecorrido() {
+        TravelService.isViewLoaded();
     }
 
+    @When("El cliente cierra su jornada")
+    public void elClienteCierraSuJornada() {
+        TravelService.finnishWorkingDay();
+    }
+
+    @Then("Vuelve a la pantalla principal")
+    public void vuelveALaPantallaPrincipal() {
+        HomeService.isViewLoaded();
+    }
 }
