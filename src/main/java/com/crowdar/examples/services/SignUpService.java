@@ -1,7 +1,6 @@
 package com.crowdar.examples.services;
 
 import com.crowdar.core.actions.MobileActionManager;
-import com.crowdar.examples.constants.SignUpConstants;
 
 /**
  * This class contains the business logic.

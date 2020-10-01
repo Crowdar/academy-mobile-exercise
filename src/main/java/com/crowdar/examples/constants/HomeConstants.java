@@ -1,11 +1,7 @@
 package com.crowdar.examples.constants;
 
 public class HomeConstants {
-
-    public static final String SIGN_OUT_BUTTON_LOCATOR = "homeView.signOutButton";
-    public static final String CHANGE_LANGUAGE_BUTTON_LOCATOR = "homeView.changeLanguageButton";
-    public static final String CAMERA_BUTTON_LOCATOR = "homeView.cameraButton";
-    public static final String PHONE_INPUT_LOCATOR = "homeView.phoneInput";
-
-    public static final String VIEW_NOT_DISPLAYED_MESSAGE = "Home page is not displayed.";
+    public static String WORKING_DAY_BUTTON_LOCATOR = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup";
+    public static String MENU_BUTTON_LOCATOR = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]";
+    public static final String VIEW_NOT_DISPLAYED_MESSAGE = "Login page is not displayed.";
 }

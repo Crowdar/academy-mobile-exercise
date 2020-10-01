@@ -33,9 +33,9 @@
             <properties>
                 <crowdar.driverHub>http://127.0.0.1:4723/wd/hub</crowdar.driverHub>
                 <cucumber.runner>testng.xml</cucumber.runner>
-                <crowdar.avd>Pixel3</crowdar.avd>
+                <crowdar.avd></crowdar.avd>
                 <crowdar.appLocation>C:/workspace/crowdar/lippia/Lippia-mobile-sample-project/sample_apk/lippia.apk</crowdar.appLocation>
-                <crowdar.deviceName>Pixel3</crowdar.deviceName>
+                <crowdar.deviceName>moto</crowdar.deviceName>
             </properties>
         </profile>
         <profile>
