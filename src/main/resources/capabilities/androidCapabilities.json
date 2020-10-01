@@ -4,5 +4,7 @@
   "platformName": "Android",
   "avd": "{{avd}}",
   "resetKeyboard": "true",
-  "unicodeKeyboard": "true"
+  "unicodeKeyboard": "true",
+  "autoGrantPermissions": "true",
+  "autoAcceptAlerts": "true"
 }

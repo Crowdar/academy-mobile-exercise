@@ -12,7 +12,7 @@ services:
     volumes:  
         - .:/opt/workspace/automation
     working_dir: /opt/workspace/automation
-    command: mvn clean test -P StackLocal,Android -Dcucumber.tags=@Demo -Dcrowdar.driverHub=http://hub:4444/wd/hub
+    command: mvn clean test -P StackLocal,Android -Dcucumber.tags=@Fichap -Dcrowdar.driverHub=http://hub:4444/wd/hub -Dcrowdar.appLocation=/root/tmp/sample_apk/Fichap_4.apk
 
      
   # Selenium hub
