@@ -1,7 +1,7 @@
 Feature: Como user quiero usar fichap para entrar, abrir un horario, y agregar un motivo a algún día
 
-  #@Smoke @FichapApk @CheckInCheckOut
-  Scenario Outline: The client starts the applicacion ApiDemos accesing to Bouncing Balls
+  @Smoke @FichapApk @CheckInCheckOut
+  Scenario Outline: Hago un check in y un check out
     Given La app es cargada correctamente
     When El user carga su '<email>' y su '<pw>'
     And Acepta el aviso
@@ -24,8 +24,8 @@ Feature: Como user quiero usar fichap para entrar, abrir un horario, y agregar u
     | kd.maurii@gmail.com | D3b8Be  |
 
 
-  #@FichapApk @CambioDomicilioPasswordConJornada
-  Scenario Outline: The client starts the applicacion ApiDemos accesing to Bouncing Balls
+  @FichapApk @CambioDomicilioPasswordConJornada
+  Scenario Outline: Hago un check in y un check out con un cambio de domicilio y password
     Given La app es cargada correctamente
     When El user carga su '<email>' y su '<pw>'
     And Acepta el aviso
@@ -58,7 +58,7 @@ Feature: Como user quiero usar fichap para entrar, abrir un horario, y agregar u
 
 
   @FichapApk @CambioDomicilioPassword
-  Scenario Outline: The client starts the applicacion ApiDemos accesing to Bouncing Balls
+  Scenario Outline: Hago  un cambio de domicilio y password sin empezar jornada
     Given La app es cargada correctamente
     When El user carga su '<email>' y su '<pw>'
     And Acepta el aviso
@@ -81,8 +81,8 @@ Feature: Como user quiero usar fichap para entrar, abrir un horario, y agregar u
     | kd.maurii@gmail.com | D3b8Be  | Calle falsa 123 |
 
 
-  #@FichapApk @SolicitudConFechaMotivo
-  Scenario Outline: The client starts the applicacion ApiDemos accesing to Bouncing Balls
+  @FichapApk @SolicitudConFechaMotivo
+  Scenario Outline: Hago un check in y un check out con una solicitud de fecha
     Given La app es cargada correctamente
     When El user carga su '<email>' y su '<pw>'
     And Acepta el aviso
@@ -105,8 +105,8 @@ Feature: Como user quiero usar fichap para entrar, abrir un horario, y agregar u
     | kd.maurii@gmail.com | D3b8Be  | 1   | Enero | 2021  | Turno con el médico   |
 
 
-  #@FichapApk @SolicitudConFechaMotivoConJornada
-  Scenario Outline: The client starts the applicacion ApiDemos accesing to Bouncing Balls
+  @FichapApk @SolicitudConFechaMotivoConJornada
+  Scenario Outline: Hago un check in y un check out con una solicitud de fecha utilizando una jornada también
     Given La app es cargada correctamente
     When El user carga su '<email>' y su '<pw>'
     And Acepta el aviso
