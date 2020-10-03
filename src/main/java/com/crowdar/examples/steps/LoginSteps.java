@@ -3,10 +3,12 @@ package com.crowdar.examples.steps;
 import com.crowdar.core.PageSteps;
 import com.crowdar.core.actions.MobileActionManager;
 import com.crowdar.examples.constants.LoginConstants;
-import com.crowdar.examples.services.LoginService;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import com.crowdar.examples.services.*;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
 
 /**
  * This class handles the steps in the features files and connects with the service in case of having business logic.
@@ -29,5 +31,65 @@ public class LoginSteps extends PageSteps {
     public void doLoginProcess(String email, String password) {
         LoginService.doLogin(email, password);
     }
+
+
+    //-------------Fichap--------------//
+    @Given("La app se muestra correctamente")
+    public void laAppSeMuestraCorrectamente() {
+        FichapLoginService.isViewLoaded();
+    }
+
+    @When("el user ingresa sus credenciales: '(.*)', '(.*)'")
+    public void elUserIngresaSusCredenciales(String email, String password) {
+        FichapLoginService.hacerLogin(email, password);
+    }
+
+    @Then("home page is displayed")
+    public void homePageIsDisplayed() {
+        FichapCamaraService.validarMensaje();
+        FichapCamaraService.sacarFoto();
+    }
+
+    /*@And("el user comienza la jornada")
+    public void elUserComienzaLaJornada() {
+        JornadaStartService.startJob();
+    }
+
+    @And("el usuario finaliza el trabajo")
+    public void elUsuarioFinalizaElTrabajo() {
+        JornadaStartService.finalJob();
+    }*/
+
+    @And("el user ingresa al submenu")
+    public void elUserIngresaAlSubmenu() {
+        ModificacionData.accedoSubMenu();
+        SesionClose.btnCloseSesion();
+        //CambioPassService.accedoPassword();
+        //SolicitudService.accedoSolicitud();
+        //ModificacionData.accedoPerfil();
+        //ModificacionData.validoMenuPerfil();
+    }
+
+
+    /*@And("selecciona fechas y envia el '(.*)'")
+    public void seleccionaFechasYEnviaElMotivo(String texto) {
+        SolicitudService.seleccionoFechas(texto);
+    }*/
+
+
+    @And("el usario cierra sesión")
+    public void elUsarioCierraSesión() {
+        SesionClose.validateCloseSesion();
+    }
+
+    /*@And("el user cambia de '(.*)' y '(.*)'")
+    public void elUserCambiaDeNewpasswordYRepeatpassword(String newPassword, String repeatPassword) {
+        CambioPassService.changePass(newPassword,repeatPassword);
+    }*/
+
+    /*@And("el user modifica sus datos: '(.*)', '(.*)', '(.*)', '(.*)', '(.*)', '(.*)'")
+    public void elUserModificaSusDatosNombreApellidoTelFijoCelularCorreoDireccion(String nombre,String apellido,String dni,String celular,String correo, String direccion) {
+        ModificacionData.guardoData(nombre,apellido,dni,celular,correo,direccion);
+    }*/
 
 }
