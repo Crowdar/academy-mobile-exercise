@@ -50,7 +50,7 @@ public class LoginSteps extends PageSteps {
         FichapCamaraService.sacarFoto();
     }
 
-    /*@And("el user comienza la jornada")
+    @And("el user comienza la jornada")
     public void elUserComienzaLaJornada() {
         JornadaStartService.startJob();
     }
@@ -58,7 +58,7 @@ public class LoginSteps extends PageSteps {
     @And("el usuario finaliza el trabajo")
     public void elUsuarioFinalizaElTrabajo() {
         JornadaStartService.finalJob();
-    }*/
+    }
 
     @And("el user ingresa al submenu")
     public void elUserIngresaAlSubmenu() {
@@ -71,10 +71,11 @@ public class LoginSteps extends PageSteps {
     }
 
 
-    /*@And("selecciona fechas y envia el '(.*)'")
-    public void seleccionaFechasYEnviaElMotivo(String texto) {
-        SolicitudService.seleccionoFechas(texto);
-    }*/
+    @And("selecciona '(.*)', '(.*)', '(.*)' y envia el '(.*)'")
+    public void seleccionaDayMonthYearYEnviaElMotivo(String day, String month, String year, String motivo) {
+        SolicitudService.seleccionoFechas(day,month,year);
+        SolicitudService.envioMotivo(motivo);
+    }
 
 
     @And("el usario cierra sesión")
@@ -82,14 +83,14 @@ public class LoginSteps extends PageSteps {
         SesionClose.validateCloseSesion();
     }
 
-    /*@And("el user cambia de '(.*)' y '(.*)'")
+    @And("el user cambia de '(.*)' y '(.*)'")
     public void elUserCambiaDeNewpasswordYRepeatpassword(String newPassword, String repeatPassword) {
         CambioPassService.changePass(newPassword,repeatPassword);
-    }*/
+    }
 
-    /*@And("el user modifica sus datos: '(.*)', '(.*)', '(.*)', '(.*)', '(.*)', '(.*)'")
+    @And("el user modifica sus datos: '(.*)', '(.*)', '(.*)', '(.*)', '(.*)', '(.*)'")
     public void elUserModificaSusDatosNombreApellidoTelFijoCelularCorreoDireccion(String nombre,String apellido,String dni,String celular,String correo, String direccion) {
         ModificacionData.guardoData(nombre,apellido,dni,celular,correo,direccion);
-    }*/
+    }
 
 }

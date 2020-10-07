@@ -14,7 +14,7 @@ public class ModificacionData {
         MobileActionManager.click(DataModConstants.CLICK_PERFIL_INPUT_LOCATOR);
     }
     public static void validoMenuPerfil(){
-        Assert.assertEquals(MobileActionManager.getText(DataModConstants.MESSAGE1_INPUT_LOCATOR),"Uriel Funes");
+        Assert.assertEquals(MobileActionManager.getText(DataModConstants.MESSAGE1_INPUT_LOCATOR),"Dario Perez");
     }
 
     public static void guardoData(String nombre,String apellido,String dni,String celular,String correo, String direccion){

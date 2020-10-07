@@ -6,14 +6,14 @@ Feature: Como cliente quiero ingresar a la app, loguearme, modificar datos perso
     When el user ingresa sus credenciales: '<email>', '<password>'
     Then home page is displayed
     And el user ingresa al submenu
-    #And el user modifica sus datos: '<nombre>', '<apellido>', '<dni>', '<celular>', '<correo>', '<direccion>'
-    #And el user comienza la jornada
-    #And el usuario finaliza el trabajo
-    #And selecciona fechas y envia el '<motivo>'
-    #And el user cambia de '<newpassword>' y '<repeatpassword>'
+    And el user modifica sus datos: '<nombre>', '<apellido>', '<dni>', '<celular>', '<correo>', '<direccion>'
+    And el user comienza la jornada
+    And el usuario finaliza el trabajo
+    And selecciona '<day>', '<month>', '<year>' y envia el '<motivo>'
+    And el user cambia de '<newpassword>' y '<repeatpassword>'
     And el usario cierra sesión
 
     @Fichap
     Examples:
-      | email                        | password   | nombre | apellido | dni     | celular    | correo                       | direccion | motivo   | newpassword | repeatpassword |
-      | gustavo.urielfunes@gmail.com | Bayern2012 | Dario  | Perez    | 4812287 | 2612737994 | gustavo.urielfunes@gmail.com | Italia 54 | add user | Bayern2012  | Bayern2012     |
+      | email                        | password   | nombre | apellido | dni     | celular    | correo                       | direccion | newpassword | repeatpassword | day | month     | year | motivo   |
+      | gustavo.urielfunes@gmail.com | Bayern2012 | Jose   | Damian   | 4512287 | 2612737892 | gustavo.urielfunes@gmail.com | Italia 87 | Bayern2013  | Bayern2013     | 15  | Diciembre | 2020 | new user |
